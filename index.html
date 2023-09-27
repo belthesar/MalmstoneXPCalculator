@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/PSone.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>PVP Malmstone XP Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <label class="title">PVP Malmstone XP Calculator</label>
+        <div class="field is-inline">
+            <label for="currentLevel">Current Level: </label>
+            <input type="number" class="input" id="currentLevel" placeholder="1-39" max="39">
+            <label for="goalLevel">Goal Level: </label>
+            <input type="number" class="input" id="goalLevel" placeholder="2-40" max="40">
+            <label for="currentProgress">Current XP Towards Next Level: </label>
+            <input type="number" class="input" id="currentProgress" placeholder="0-19999" max="19999">
+        </div>
+        <button type="button", class="btn" onclick="calculateXP()">Calculate</button>
+    </div>
+    
+
+    <div class="container">
+        <label class="title">Output</label>
+        <div id="output">
+
+        </div>
+    </div>
+
+    <div class="container">
+        <label class="title">About</label>
+        <p>
+            PVP Malmstone XP Calculator tool created by <a href="https://github.com/belthesar">belthesar</a>, 
+            based off of <a href="https://replit.com/@NanaGrace/Malmstone-XP-Calculator">Malmstone XP Calculator</a> 
+            by <a href="https://replit.com/@NanaGrace">NanaGrace</a>.
+        </p>
+        <p>
+            This tool is designed to help you calculate how many malmstones you need to reach a given PVP 
+            Malmstone Series Level goal. The values you put in are stored in your browser's local storage,
+            so you can come back and update your progress without having to re-enter everything. 
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
