@@ -75,19 +75,19 @@ function calculateXP() {
     // Display the results in the "output" div
 
     outputDiv.innerHTML = `
-        <p>You have <label class="emphasis">${exp}</label> remaining XP to reach level <label class="emphasis">${goal_level}</label>!</p>
+        <p>You have <label class="emphasis">${exp}</label> remaining XP to reach level <label class="emphasis">${goal_level}</label>!</p>    
         <p>You can reach your goal by doing any combination of the following activities:
         <ul>
-        <li>Winning ${cctotal_Win} matches of Crystaline Conflict</li>
-        <li>Losing ${cctotal_Lose} matches of Crystaline Conflict</li>
-        <li>Winning 1st Place in ${fltotal_Win} Frontline matches</li>
-        <li>Losing 2nd Place in ${fltotal_Lose2} Frontline matches</li>
-        <li>Losing 3rd Place in ${fltotal_Lose} Frontline matches</li>
-        <li>Winning 1st Place in ${fltotal_DailyWin} Daily Frontline matches</li>
-        <li>Losing 2nd Place in ${fltotal_DailyLose2} Daily Frontline matches</li>
-        <li>Losing 3rd Place in ${fltotal_DailyLose} Daily Frontline matches</li>
-        <li>Winning in ${rwtotal_Win} Rival Wings matches</li>
-        <li>Losing in ${rwtotal_Lose} Rival Wings matches</li>
+            <li>Winning ${cctotal_Win} matches of Crystaline Conflict</li>
+            <li>Losing ${cctotal_Lose} matches of Crystaline Conflict</li>
+            <li>Winning 1st Place in ${fltotal_Win} Frontline matches</li>
+            <li>Losing 2nd Place in ${fltotal_Lose2} Frontline matches</li>
+            <li>Losing 3rd Place in ${fltotal_Lose} Frontline matches</li>
+            <li>Winning 1st Place in ${fltotal_DailyWin} Daily Frontline matches</li>
+            <li>Losing 2nd Place in ${fltotal_DailyLose2} Daily Frontline matches</li>
+            <li>Losing 3rd Place in ${fltotal_DailyLose} Daily Frontline matches</li>
+            <li>Winning in ${rwtotal_Win} Rival Wings matches</li>
+            <li>Losing in ${rwtotal_Lose} Rival Wings matches</li>
         </ul>
     `;
 
