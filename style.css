@@ -5,3 +5,8 @@ ul {
 label.emphasis {
     color: magenta;
 }
+
+b {
+    font-weight: 400;
+    color: #ffe851;
+}

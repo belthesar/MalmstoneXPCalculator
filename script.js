@@ -92,17 +92,24 @@ function calculateXP() {
     outputDiv.innerHTML = `
         <p>You have <label class="emphasis">${exp}</label> remaining XP to reach level <label class="emphasis">${goal_level}</label>!</p>    
         <p>You can reach your goal by doing any combination of the following activities:
+        <p><b> Crystaline Conflict </b></p>
         <ul>
             <li>Win <label class="emphasis">${cctotal_Win}</label> matches of Crystaline Conflict</li>
             <li>Lose <label class="emphasis">${cctotal_Lose}</label> matches of Crystaline Conflict</li>
+        </ul>
+        <p><b> Frontlines </b></p>
+        <ul>
+            <li>Take 1st Place in <label class="emphasis">${fltotal_DailyWin}</label> Frontline Roulettes </li>
+            <li>Take 2nd Place in <label class="emphasis">${fltotal_DailyLose2}</label> Frontline Roulettes</li>
+            <li>Take 3rd Place in <label class="emphasis">${fltotal_DailyLose}</label> Frontline Roulettes</li>
             <li>Take 1st Place in <label class="emphasis">${fltotal_Win}</label> Frontlines</li>
             <li>Take 2nd Place in <label class="emphasis">${fltotal_Lose2}</label> Frontlines</li>
             <li>Take 3rd Place in <label class="emphasis">${fltotal_Lose}</label> Frontlines</li>
-            <li>Take 1st Place in <label class="emphasis">${fltotal_DailyWin}</label> Daily Frontlines </li>
-            <li>Take 2nd Place in <label class="emphasis">${fltotal_DailyLose2}</label> Daily Frontlines</li>
-            <li>Take 3rd Place in <label class="emphasis">${fltotal_DailyLose}</label> Daily Frontlines</li>
-            <li>Winning in <label class="emphasis">${rwtotal_Win}</label> Rival Wings matches</li>
-            <li>Losing in <label class="emphasis">${rwtotal_Lose}</label> Rival Wings matches</li>
+        </ul>
+        <p><b> Rival Wings </b></p>
+        <ul>
+            <li>Win <label class="emphasis">${rwtotal_Win}</label> matches</li>
+            <li>Lose <label class="emphasis">${rwtotal_Lose}</label> Rival Wings matches</li>
         </ul>
     `;
 
