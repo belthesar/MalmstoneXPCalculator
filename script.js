@@ -39,13 +39,27 @@ function saveInputData() {
     };
     localStorage.setItem("MalmstoneXPCalculator", JSON.stringify(inputData));
 }
+const element_currentLevel = document.getElementById("currentLevel");
+const element_goalLevel = document.getElementById("goalLevel");
+const element_currentProgress = document.getElementById("currentProgress");
+
+// Use change listeners on the input elements to adjust minimum and maximum values
+// Current level cannot be higher than goal level. Goal level cannot be lower than current level.
+// Current progress cannot be higher than the difference between current level and goal level, when referring to the total exp required to reach the goal level.
+
+function eventHandler_currentLevel(value) {
+    if(value > element_goalLevel.value) {
+        element_goalLevel.value = value;
+    }
+}
+
 
 // Function to calculate XP
 function calculateXP() {
     // Retrieve input values from DOM elements
-    const current_level = parseInt(document.getElementById("currentLevel").value);
-    const goal_level = parseInt(document.getElementById("goalLevel").value);
-    const current_progress = parseInt(document.getElementById("currentProgress").value);
+    const current_level = parseInt(element_currentLevel.value);
+    const goal_level = parseInt(element_goalLevel.value);
+    const current_progress = parseInt(element_goalLevel.value);
 
     const outputDiv = document.getElementById("output");
 
@@ -54,6 +68,7 @@ function calculateXP() {
         outputDiv.innerHTML = "<p>Please set your Current Level, Goal Level, and Current XP Towards Next Level, and then click CALCULATE to generate your results!</p>";
         return;
     }
+    
 
     // Rest of the code remains the same
     const current_level_memory = pvpLvl[current_level];
