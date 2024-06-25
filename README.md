@@ -2,7 +2,7 @@
 Helper site to calculate what PVP duties you need to complete to reach your series goals in Final Fantasy XIV! 
 
 ## How to use
-The page is hosted on Github Actions! Go to the [site](https://belthesar.github.io/MalmstoneXPCalculator/) to use it.
+The page is hosted on Github Sites! Go to the [site](https://belthesar.github.io/MalmstoneXPCalculator/) to use it.
 
 * Fill in your current PVP Series Level, Goal Level, and current XP, and click "Calculate". It'll tell you what types of PVP duties you can do to reach your goal.
 * The page saves the values you input in local storage in your browser, for easy use later! Tired of running Frontlines? See how many Rival Wings you need to do to reach your goal!

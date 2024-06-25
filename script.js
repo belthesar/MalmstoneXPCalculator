@@ -93,16 +93,16 @@ function calculateXP() {
         <p>You have <label class="emphasis">${exp}</label> remaining XP to reach level <label class="emphasis">${goal_level}</label>!</p>    
         <p>You can reach your goal by doing any combination of the following activities:
         <ul>
-            <li>Winning ${cctotal_Win} matches of Crystaline Conflict</li>
-            <li>Losing ${cctotal_Lose} matches of Crystaline Conflict</li>
-            <li>Winning 1st Place in ${fltotal_Win} Frontline matches</li>
-            <li>Losing 2nd Place in ${fltotal_Lose2} Frontline matches</li>
-            <li>Losing 3rd Place in ${fltotal_Lose} Frontline matches</li>
-            <li>Winning 1st Place in ${fltotal_DailyWin} Daily Frontline matches</li>
-            <li>Losing 2nd Place in ${fltotal_DailyLose2} Daily Frontline matches</li>
-            <li>Losing 3rd Place in ${fltotal_DailyLose} Daily Frontline matches</li>
-            <li>Winning in ${rwtotal_Win} Rival Wings matches</li>
-            <li>Losing in ${rwtotal_Lose} Rival Wings matches</li>
+            <li>Win <label class="emphasis">${cctotal_Win}</label> matches of Crystaline Conflict</li>
+            <li>Lose <label class="emphasis">${cctotal_Lose}</label> matches of Crystaline Conflict</li>
+            <li>Take 1st Place in <label class="emphasis">${fltotal_Win}</label> Frontlines</li>
+            <li>Take 2nd Place in <label class="emphasis">${fltotal_Lose2}</label> Frontlines</li>
+            <li>Take 3rd Place in <label class="emphasis">${fltotal_Lose}</label> Frontlines</li>
+            <li>Take 1st Place in <label class="emphasis">${fltotal_DailyWin}</label> Daily Frontlines </li>
+            <li>Take 2nd Place in <label class="emphasis">${fltotal_DailyLose2}</label> Daily Frontlines</li>
+            <li>Take 3rd Place in <label class="emphasis">${fltotal_DailyLose}</label> Daily Frontlines</li>
+            <li>Winning in <label class="emphasis">${rwtotal_Win}</label> Rival Wings matches</li>
+            <li>Losing in <label class="emphasis">${rwtotal_Lose}</label> Rival Wings matches</li>
         </ul>
     `;
 
