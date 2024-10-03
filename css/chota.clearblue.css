@@ -1,0 +1,170 @@
+:root {
+    --clearBlue_borderOuter: rgb(60, 110, 226);
+    --clearBlue_borderOuterShadow: #a29a87;
+    --clearBlue_borderOuterGlow: rgba(37, 72, 136, 0.4);
+    --clearBlue_placeholderOuterGlow: rgba(255, 255, 255, 0.5);
+    --clearBlue_borderInner: hsla(0, 0%, 100%, 0.1);
+    --clearBlue_borderInnerShadow: #222;
+    --clearBlue_borderInnerGlow: rgba(0, 0, 0, 0.4);
+    
+    --clearBlue_toggleBackground: #1e3264;
+    --clearBlue_toggleShadow: rgba(0, 0, 0, 0.5);
+    --clearBlue_toggleHighlight: rgba(118, 150, 224, 0.2);
+    --clearBlue_placeholderInnerBackground: --clearBlue_contentBackground;
+    --clearBlue_placeholderInsetBorder: #3c6ee2;
+    
+    --clearBlue_containerBackground: #1b294e;
+    --clearBlue_contentBackground: #254888;
+    
+    --clearBlue_contextMenuBackground: --clearBlue_contentBackground;
+    --clearBlue_contextMenuItemBackground: #eee1c5;
+    --clearBlue_contextMenuShadow: rgba(0, 0, 0, 0.6);
+    
+    --clearBlue_headerSubtitleText: hsla(0, 0%, 100%, 0.5);
+    --clearBlue_importantText: #eee1c5;
+    --clearBlue_importantTextRGBA65: rgba(238, 225, 197, 1);
+    --clearBlue_distinguishedText: #a29a87;
+    --clearBlue_headerAndLinkText: hsla(0, 0%, 100%, 0.7);
+    
+    --clearBlue_playerTableRowText: hsla(0, 0%, 100%, 0.5);
+    --clearBlue_playerTableRowBorderTop: hsla(0, 0%, 100%, 0.05);
+    --clearBlue_playerTableRowBackground: rgba(255, 255, 255, 0.05);
+    --clearBlue_playerTableActiveRowBackground: rgba(255, 255, 255, 0.15);
+    --clearBlue_playerTableHeaderRowBackground: rgba(255, 255, 255, 0.03);
+    
+    --clearBlue_playerDetailSectionTitleText: --clearBlue_importantText;
+    --clearBlue_playerDetailSectionDataTitleText: --clearBlue_distinguishedText;
+    --clearBlue_playerDetailSectionDataValueText: rgba(255, 255, 255, 0.5);
+    
+    --clearBlue_gridItemBackground: rgba(0, 0, 0, 0.2);
+    
+    --clearBlue_footerLinkInnerShadow: hsla(0, 0%, 100%, 0.07);
+    --clearBlue_footerLinkOuterShadow: rgba(0, 0, 0, 0.2);
+    --clearBlue_footerActiveLinkBackground: rgba(255, 255, 255, 0.2);
+    
+    --clearBlue_rowAndLinkHoverBackground: rgba(255, 255, 255, 0.07);
+    
+    --clearBlue_spellWarningBackground: linear-gradient(hsla(53, 50%, 62%, 0.2), hsla(53, 50%, 62%, 0.2));
+}
+
+body {
+    /* color: var(--clearBlue_importantText); */
+    color: white;
+    font-family: 'Myriad Pro Regular', sans-serif;
+    background-image: linear-gradient(0deg, #1b294e 0%, #254888 100%);
+    background-color: #1b294e;
+
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Myriad Pro Condensed', sans-serif;
+    text-transform: uppercase;
+    font-stretch: extra-condensed;
+    margin: 0 !important;
+}
+
+h4 {
+    /* font-family: 'Eurostar Regular Extended', sans-serif; */
+    /* font-size: 1.5rem */
+}
+
+div.banner-header {
+    background-image: linear-gradient(90deg, rgb(113, 148, 239) 25%, rgba(0,0,0,0.1) 100%);
+    /* font-family: 'Myriad Pro Bold', sans-serif; */
+    font-weight: bold;
+    color: black;
+    font-size: 0.8em;
+    height: 2rem;
+    width: 100%;
+    padding-left: 0.5em;
+}
+header > div > div > img {
+    width: 2em;
+    height: 2em;
+    /* padding-top: 0em; */
+    margin-top: 0.5em;
+}
+
+a {
+    color: var(--clearBlue_headerAndLinkText);
+}
+
+div.container {
+    width         : calc(100% - 4em);
+	height        : calc(100% - 0.5em);
+	position      : relative;
+	box-sizing    : border-box;
+	border-radius : 8px;
+	margin        : 0 auto;
+    margin-bottom : 0.5em;
+    opacity: 0.9;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: radial-gradient(60% 25% at 0% 0%, var(--clearBlue_borderOuter) 0%, transparent 100%), radial-gradient(at right top, var(--clearBlue_containerBackground), var(--clearBlue_contentBackground));
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    color: var(--clearBlue_importantText);
+    font-family: 'Eurostar Regular Extended', sans-serif;
+    text-transform: capitalize;
+}
+div.summary {
+    padding: 0 0.5em;
+}
+div.container > div.inner {
+	width          : 100%;
+	height         : 100%;
+	position       : relative;
+	box-sizing     : border-box;
+	display        : flex;
+	flex-direction : column;
+	border-radius  : 1px;
+	overflow       : hidden;
+    background-image: linear-gradient(90deg, var(--clearBlue_toggleBackground) 0%, var(--clearBlue_containerBackground) 100%);
+    box-shadow: none;
+    /* border-radius: 0; */
+    box-shadow: 0 -1px 0 var(--clearBlue_borderInnerGlow), inset 0 -1px 0 var(--clearBlue_borderInner);
+    margin-bottom: 0.5em;
+}
+
+header {
+    font-weight: 100;
+    color: var(--clearBlue_headerAndLinkText);
+}
+
+label {
+    text-transform: uppercase;
+}
+
+input.input {
+    color: var(--clearBlue_headerAndLinkText);
+    font-family: 'Eurostar Regular Extended', sans-serif;
+    font-size: 1em;
+    background: var(--clearBlue_contentBackground);
+    border: 0px solid var(--clearBlue_borderInner);
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 var(--clearBlue_borderInnerGlow), inset 0 -1px 0 var(--clearBlue_borderInner);
+    padding: 0.5rem 1rem;
+    border-radius: 1px;
+    text-align: right;
+    /* width: 8em; */
+}
+
+button.button {
+    color: white;
+    font-family: 'Myriad Pro Light', sans-serif;
+    font-size: 1em;
+    text-shadow: 2px 2px var(--clearBlue_toggleShadow);
+    /* background: var(--clearBlue_toggleBackground); */
+    background-image: radial-gradient(75% 25% at 50% 100%, var(--clearBlue_borderOuter) 0%, var(--clearBlue_toggleBackground) 100%);
+    /* border: 1px solid var(--clearBlue_borderInner); */
+    /* box-shadow: 0 -1px 0 var(--clearBlue_borderInnerGlow), inset 0 -1px 0 var(--clearBlue_borderInner); */
+    box-shadow: inset 0 0.2rem 0rem 0 var(--clearBlue_toggleHighlight), inset 0 0 0.1rem 0 var(--clearBlue_placeholderInsetBorder), 0 0 0 0 var(--clearBlue_toggleShadow), 0 0.1rem 0.1rem 0.1rem var(--clearBlue_toggleShadow);
+    padding: 0.5rem 2rem;
+    border-radius: 1px;
+}
