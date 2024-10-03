@@ -100,8 +100,11 @@ function calculateXP() {
     // Display the results in the "output" div
 
     summaryElement.innerHTML = `
-        <p>You have <label>${exp}</label> remaining XP to reach level <label>${goal_level}</label>!</p>    
-        <p>You can reach your goal by doing any combination of the following activities:</p>`;
+        <p>
+            You have <label>${exp}</label> remaining XP to reach level <label>${goal_level}</label>!
+            You can reach your goal by doing any combination of the following activities:
+        </p>
+        `;
     ccElement.innerHTML = `
         <div class="banner-header">❖ Crystaline Conflict</div>
         <ul>
