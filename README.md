@@ -10,3 +10,6 @@ The page is hosted on Github Sites! Go to the [site](https://belthesar.github.io
 ## Credits
  - Huge thanks to NanaGrace for their python-based Malmstone XP Calculator, which rubbed all the math on this for me, so I only had to translate it to JS. Original code can be found here: https://replit.com/@NanaGrace/Malmstone-XP-Calculator
  - Social image from https://mmos.com/news/final-fantasy-xivs-developers-blog-outlines-some-of-its-upcoming-pvp-changes/attachment/ffxiv-pvp-gear
+
+> [!NOTE]
+> Did you find this useful? Feel free to say thanks by saying hi in-game to Belthesar Eoudren on Cactuar!
