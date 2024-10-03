@@ -101,7 +101,7 @@ function calculateXP() {
 
     summaryElement.innerHTML = `
         <p>
-            You have <label>${exp}</label> remaining XP to reach level <label>${goal_level}</label>!
+            You have <label>${exp}</label> remaining XP to reach level <label>${goal_level}</label>! <br/>
             You can reach your goal by doing any combination of the following activities:
         </p>
         `;
