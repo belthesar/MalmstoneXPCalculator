@@ -62,11 +62,21 @@ function calculateXP() {
     const current_progress = parseInt(element_goalLevel.value);
 
     const outputDiv = document.getElementById("output");
+    const firstTimeElement = document.getElementById("firstTime");
+
+    const summaryElement = document.getElementById("summary");
+    const ccElement = document.getElementById("cc");
+    const flElement = document.getElementById("fl");
+    const rwElement = document.getElementById("rw");
 
     // Validate input values
     if (isNaN(current_level) || isNaN(goal_level) || isNaN(current_progress)) {
-        outputDiv.innerHTML = "<p>Please set your Current Level, Goal Level, and Current XP Towards Next Level, and then click CALCULATE to generate your results!</p>";
+        firstTimeElement.classList.remove("hidden");
+        !outputDiv?.classList.contains("hidden") ? outputDiv?.classList.add('hidden') : Function.prototype();
         return;
+    } else {
+        firstTimeElement.classList.add("hidden");
+        outputDiv.classList.remove("hidden");
     }
     
 
@@ -89,27 +99,32 @@ function calculateXP() {
 
     // Display the results in the "output" div
 
-    outputDiv.innerHTML = `
-        <p>You have <label class="emphasis">${exp}</label> remaining XP to reach level <label class="emphasis">${goal_level}</label>!</p>    
-        <p>You can reach your goal by doing any combination of the following activities:
-        <p><b> Crystaline Conflict </b></p>
+    summaryElement.innerHTML = `
+        <p>You have <label>${exp}</label> remaining XP to reach level <label>${goal_level}</label>!</p>    
+        <p>You can reach your goal by doing any combination of the following activities:</p>`;
+    ccElement.innerHTML = `
+        <div class="banner-header">❖ Crystaline Conflict</div>
         <ul>
-            <li>Win <label class="emphasis">${cctotal_Win}</label> matches of Crystaline Conflict</li>
-            <li>Lose <label class="emphasis">${cctotal_Lose}</label> matches of Crystaline Conflict</li>
+            <li>Win <label>${cctotal_Win}</label> match${cctotal_Win > 1 ? "es" : ""}</li>
+            <li>Lose <label>${cctotal_Lose}</label> match${cctotal_Lose > 1 ? "es" : ""}</li>
         </ul>
-        <p><b> Frontlines </b></p>
+    `;
+    flElement.innerHTML = `
+        <div class="banner-header">❖ Frontlines</div>
         <ul>
-            <li>Take 1st Place in <label class="emphasis">${fltotal_DailyWin}</label> Frontline Roulettes </li>
-            <li>Take 2nd Place in <label class="emphasis">${fltotal_DailyLose2}</label> Frontline Roulettes</li>
-            <li>Take 3rd Place in <label class="emphasis">${fltotal_DailyLose}</label> Frontline Roulettes</li>
-            <li>Take 1st Place in <label class="emphasis">${fltotal_Win}</label> Frontlines</li>
-            <li>Take 2nd Place in <label class="emphasis">${fltotal_Lose2}</label> Frontlines</li>
-            <li>Take 3rd Place in <label class="emphasis">${fltotal_Lose}</label> Frontlines</li>
+            <li>Take 1st Place in ${fltotal_DailyWin}</label> Frontline Roulette${fltotal_DailyWin > 1 ? "s" : ""}</li>
+            <li>Take 2nd Place in <label>${fltotal_DailyLose2}</label> Frontline Roulette${fltotal_DailyLose2 > 1 ? "s" : ""}</li>
+            <li>Take 3rd Place in <label>${fltotal_DailyLose}</label> Frontline Roulette${fltotal_DailyLose > 1 ? "s" : ""}</li>
+            <li>Take 1st Place in <label>${fltotal_Win}</label> Frontline${fltotal_Win > 1 ? "s" : ""}</li>
+            <li>Take 2nd Place in <label>${fltotal_Lose2}</label> Frontline${fltotal_Lose2 > 1 ? "s" : ""}</li>
+            <li>Take 3rd Place in <label>${fltotal_Lose}</label> Frontline${fltotal_Lose > 1 ? "s" : ""}</li>
         </ul>
-        <p><b> Rival Wings </b></p>
+    `;
+    rwElement.innerHTML = `
+        <div class="banner-header">❖ Rival Wings</div>
         <ul>
-            <li>Win <label class="emphasis">${rwtotal_Win}</label> matches</li>
-            <li>Lose <label class="emphasis">${rwtotal_Lose}</label> Rival Wings matches</li>
+            <li>Win <label>${rwtotal_Win}</label> matche${rwtotal_Win > 1 ? "s" : ""}</li>
+            <li>Lose <label>${rwtotal_Lose}</label> matche${rwtotal_Lose > 1 ? "s" : ""}</li>
         </ul>
     `;
 
