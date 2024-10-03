@@ -115,7 +115,7 @@ function calculateXP() {
     flElement.innerHTML = `
         <div class="banner-header">❖ Frontlines</div>
         <ul>
-            <li>Take 1st Place in ${fltotal_DailyWin}</label> Frontline Roulette${fltotal_DailyWin > 1 ? "s" : ""}</li>
+            <li>Take 1st Place in <label>${fltotal_DailyWin}</label> Frontline Roulette${fltotal_DailyWin > 1 ? "s" : ""}</li>
             <li>Take 2nd Place in <label>${fltotal_DailyLose2}</label> Frontline Roulette${fltotal_DailyLose2 > 1 ? "s" : ""}</li>
             <li>Take 3rd Place in <label>${fltotal_DailyLose}</label> Frontline Roulette${fltotal_DailyLose > 1 ? "s" : ""}</li>
             <li>Take 1st Place in <label>${fltotal_Win}</label> Frontline${fltotal_Win > 1 ? "s" : ""}</li>
