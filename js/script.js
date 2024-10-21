@@ -59,7 +59,7 @@ function calculateXP() {
     // Retrieve input values from DOM elements
     const current_level = parseInt(element_currentLevel.value);
     const goal_level = parseInt(element_goalLevel.value);
-    const current_progress = parseInt(element_goalLevel.value);
+    const current_progress = parseInt(element_currentProgress.value);
 
     const outputDiv = document.getElementById("output");
     const firstTimeElement = document.getElementById("firstTime");
