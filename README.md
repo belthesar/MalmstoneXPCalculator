@@ -12,4 +12,4 @@ The page is hosted on Github Sites! Go to the [site](https://belthesar.github.io
  - Social image from https://mmos.com/news/final-fantasy-xivs-developers-blog-outlines-some-of-its-upcoming-pvp-changes/attachment/ffxiv-pvp-gear
 
 > [!NOTE]
-> Did you find this useful? Feel free to say thanks by saying hi in-game to Belthesar Eoudren on Cactuar!
+> Did you find this useful? Feel free to say thanks by saying hi in-game to Belthesar Eoudren on Kraken!
