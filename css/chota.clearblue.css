@@ -185,6 +185,11 @@ input.input {
   /* width: 8em; */
 }
 
+p.importStatus {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
 button.button {
   color: white;
   font-family: "Myriad Pro Light", sans-serif;
