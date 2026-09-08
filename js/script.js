@@ -1,3 +1,9 @@
+const pvpSeriesInt = 12;
+const pvpSeriesStart = new Date("08 Sept 2026 12:00:00 UTC")
+// const pvpSeriesEnd = new Date("08 Jan 2027 12:00:00 UTC")
+const pvpSeriesEnd = new Date("09 Sept 2026 12:00:00 UTC")
+const pvpSeriesEndKnown = false // set to true to use above date, otherwise use unknown string
+
 // Based on Data from patch 6.40
 // List of total Exp required to reach each Level.
 const pvpLvl = [
@@ -194,6 +200,25 @@ function importData() {
       "⚠ Invalid export string. Please check and try again.";
   }
 }
+
+function updatePVPSeriesInfo() {
+  var daysLeftOfSeries = Math.floor(Math.abs(pvpSeriesEnd - Date.now()) / 1000 / 60 / 60 / 24)
+  var strDaysLeft = "??"
+  if (pvpSeriesEndKnown) {
+    if (daysLeftOfSeries < 1) {
+      strDaysLeft = "<1"
+    } else {
+      strDaysLeft = daysLeftOfSeries.toString()
+    }
+  }
+  var pvpSeriesEl = document.getElementById("pvp-series-number")
+  pvpSeriesEl.textContent = pvpSeriesInt.toString()
+  var pvpSeriesCountdown = document.getElementById("series-countdown")
+  pvpSeriesCountdown.textContent = strDaysLeft
+}
+
+
+updatePVPSeriesInfo()
 
 // Load input data from localStorage on page load
 loadInputData();
