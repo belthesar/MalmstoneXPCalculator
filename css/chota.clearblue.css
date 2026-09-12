@@ -13,6 +13,10 @@
   --clearBlue_placeholderInnerBackground: --clearBlue_contentBackground;
   --clearBlue_placeholderInsetBorder: #3c6ee2;
 
+  --clearBlue_warningBackground: rgba(153, 35, 34, 1);
+  --clearBlue_warningBorderOuter: rgba(90, 20, 20, 1);
+  --clearBlue_warningOuter: rgba();
+
   --clearBlue_containerBackground: #1b294e;
   --clearBlue_contentBackground: #254888;
 
@@ -210,4 +214,17 @@ button.button {
     0 0.1rem 0.1rem 0.1rem var(--clearBlue_toggleShadow);
   padding: 0.5rem 2rem;
   border-radius: 1px;
+}
+
+button.warning {
+  background-image: radial-gradient(
+    75% 25% at 50% 100%,
+    var(--clearBlue_warningBorderOuter) 0%,
+    var(--clearBlue_warningBackground) 100%
+  );
+  box-shadow:
+    inset 0 0.2rem 0rem 0 var(--clearBlue_toggleHighlight),
+    inset 0 0 0.1rem 0 var(--clearBlue_warningBackground),
+    0 0 0 0 var(--clearBlue_toggleShadow),
+    0 0.1rem 0.1rem 0.1rem var(--clearBlue_toggleShadow);
 }

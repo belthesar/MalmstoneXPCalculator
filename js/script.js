@@ -1,8 +1,9 @@
 const pvpSeriesInt = 12;
 const pvpSeriesStart = new Date("08 Sept 2026 12:00:00 UTC")
-// const pvpSeriesEnd = new Date("08 Jan 2027 12:00:00 UTC")
-const pvpSeriesEnd = new Date("09 Sept 2026 12:00:00 UTC")
+// const pvpSeriesEnd = new Date("15 Sept 2026 12:00:00 UTC") // test date
+const pvpSeriesEnd = new Date("08 Jan 2027 12:00:00 UTC")
 const pvpSeriesEndKnown = false // set to true to use above date, otherwise use unknown string
+var daysLeftOfSeries = Math.floor(Math.abs(pvpSeriesEnd - Date.now()) / 1000 / 60 / 60 / 24)
 
 // Based on Data from patch 6.40
 // List of total Exp required to reach each Level.
@@ -73,6 +74,7 @@ function calculateXP() {
   const ccElement = document.getElementById("cc");
   const flElement = document.getElementById("fl");
   const rwElement = document.getElementById("rw");
+  const dailyFLElement = document.getElementById("daily_fl");
 
   // Validate input values
   if (isNaN(current_level) || isNaN(goal_level) || isNaN(current_progress)) {
@@ -121,12 +123,17 @@ function calculateXP() {
 
   // Display the results in the "output" div
 
-  summaryElement.innerHTML = `
+  summary = `
         <p>
-            You have <label>${exp}</label> remaining XP to reach level <label>${goal_level}</label>! <br/>
+            You need <label>${exp}</label> XP to reach level <label>${goal_level}</label>! <br/>`
+  if (daysLeftOfSeries > fltotal_DailyLose) {
+    summary += `❖ You can reach your current PVP series goal if you run a Frontline Roulette daily from today until the end of the season! ❖<br/>`
+  }
+  summary += `
             You can reach your goal by doing any combination of the following activities:
         </p>
         `;
+  summaryElement.innerHTML = summary
   ccElement.innerHTML = `
         <div class="banner-header">❖ Crystaline Conflict</div>
         <ul>
@@ -201,8 +208,19 @@ function importData() {
   }
 }
 
+function resetData() {
+  // TODO: Present confirmation dialog
+  // If OK, reset to defaults
+  var reset = {
+    "currentLevel": "1",
+    "currentProgress": "0",
+    "goalLevel": "25",
+  }
+  localStorage.setItem("MalmstoneXPCalculator", JSON.stringify(reset))
+}
+
 function updatePVPSeriesInfo() {
-  var daysLeftOfSeries = Math.floor(Math.abs(pvpSeriesEnd - Date.now()) / 1000 / 60 / 60 / 24)
+  // var daysLeftOfSeries = Math.floor(Math.abs(pvpSeriesEnd - Date.now()) / 1000 / 60 / 60 / 24)
   var strDaysLeft = "??"
   if (pvpSeriesEndKnown) {
     if (daysLeftOfSeries < 1) {
@@ -210,11 +228,15 @@ function updatePVPSeriesInfo() {
     } else {
       strDaysLeft = daysLeftOfSeries.toString()
     }
+  } else {
+    if (daysLeftOfSeries > 30) {
+      strDaysLeft = ">30"
+    }
   }
   var pvpSeriesEl = document.getElementById("pvp-series-number")
   pvpSeriesEl.textContent = pvpSeriesInt.toString()
-  var pvpSeriesCountdown = document.getElementById("series-countdown")
-  pvpSeriesCountdown.textContent = strDaysLeft
+  var pvpSeriesCountdownEl = document.getElementById("series-countdown")
+  pvpSeriesCountdownEl.textContent = strDaysLeft
 }
 
 
