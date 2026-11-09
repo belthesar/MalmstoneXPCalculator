@@ -1,8 +1,8 @@
 const pvpSeriesInt = 12;
 const pvpSeriesStart = new Date("08 Sept 2026 12:00:00 UTC")
 // const pvpSeriesEnd = new Date("15 Sept 2026 12:00:00 UTC") // test date
-const pvpSeriesEnd = new Date("08 Jan 2027 12:00:00 UTC")
-const pvpSeriesEndKnown = false // set to true to use above date, otherwise use unknown string
+const pvpSeriesEnd = new Date("19 Feb 2027 12:00:00 UTC")
+const pvpSeriesEndKnown = true // set to true to use above date, otherwise use unknown string
 var daysLeftOfSeries = Math.floor(Math.abs(pvpSeriesEnd - Date.now()) / 1000 / 60 / 60 / 24)
 
 // Based on Data from patch 6.40
